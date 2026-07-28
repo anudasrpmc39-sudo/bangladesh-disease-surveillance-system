@@ -1,14 +1,13 @@
 export default function Dashboard() {
   return (
-    <>
-      <h1 className="text-3xl font-bold mb-6">
-        Dashboard
-      </h1>
+    <div style={{ padding: "20px" }}>
+      <h1>Bangladesh Disease Surveillance System</h1>
+      <h2>Dashboard</h2>
 
       <p>
-        Welcome to Bangladesh Disease Surveillance
-        System
+        Welcome! This will become the central monitoring dashboard for disease
+        surveillance in Bangladesh.
       </p>
-    </>
+    </div>
   );
 }
