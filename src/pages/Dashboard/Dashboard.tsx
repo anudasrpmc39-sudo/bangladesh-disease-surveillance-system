@@ -1,13 +1,27 @@
+import KpiCard from "../../components/cards/KpiCard";
+import { dashboardData } from "../../data/dashboardData";
+
 export default function Dashboard() {
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Bangladesh Disease Surveillance System</h1>
-      <h2>Dashboard</h2>
+    <>
+      <h1>Disease Surveillance Dashboard</h1>
 
-      <p>
-        Welcome! This will become the central monitoring dashboard for disease
-        surveillance in Bangladesh.
-      </p>
-    </div>
+      <div
+        style={{
+          display: "flex",
+          gap: "20px",
+          marginTop: "20px",
+          flexWrap: "wrap",
+        }}
+      >
+        {dashboardData.map((item) => (
+          <KpiCard
+            key={item.title}
+            title={item.title}
+            value={item.value}
+          />
+        ))}
+      </div>
+    </>
   );
 }
