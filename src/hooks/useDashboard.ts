@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { loadCSV } from "../services/csvService";
+import { loadSurveillanceData } from "../services/csvService";
 import { calculateDashboard } from "../services/statisticsService";
 
 export function useDashboard() {
@@ -7,7 +7,7 @@ export function useDashboard() {
 
   useEffect(() => {
     async function load() {
-      const data = await loadCSV("/data/diarrhea_surveillance.csv");
+      const data = await loadSurveillanceData();
       setStats(calculateDashboard(data));
     }
 

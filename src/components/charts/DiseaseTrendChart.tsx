@@ -1,16 +1,6 @@
 import { useMemo } from "react";
-import {
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from "recharts";
-
 import ChartCard from "./ChartCard";
-import { SurveillanceCase } from "../../types/surveillance";
+import type { SurveillanceCase } from "../../types/SurveillanceCase";
 
 type DiseaseTrendChartProps = {
   data: SurveillanceCase[];
@@ -75,3 +65,4 @@ return (
     </div>
   </ChartCard>
 );
+}

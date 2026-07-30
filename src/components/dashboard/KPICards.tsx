@@ -9,7 +9,7 @@ import {
   Skull,
 } from "lucide-react";
 
-import { SurveillanceCase } from "../../types/surveillance";
+import type { SurveillanceCase } from "../../types/SurveillanceCase";
 import StatCard from "../common/StatCard";
 
 type KPICardsProps = {

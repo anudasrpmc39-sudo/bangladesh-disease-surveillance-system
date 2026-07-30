@@ -37,13 +37,23 @@ export default function Dashboard() {
   const [data, setData] = useState<SurveillanceCase[]>([]);
 
   // Centralized Filter State
-  const [filters, setFilters] = useState<FilterState>({
-    disease: "All",
-    district: "All",
-    upazila: "All",
-    startDate: "",
-    endDate: "",
-  });
+const [filters, setFilters] = useState<FilterState>({
+  disease: "All",
+  district: "All",
+  upazila: "All",
+
+  startDate: "",
+  endDate: "",
+
+  hospitalized: "All",
+  outcome: "All",
+  sex: "All",
+
+  minAge: null,
+  maxAge: null,
+
+  facility: "All",
+});
 
   useEffect(() => {
     async function fetchData() {

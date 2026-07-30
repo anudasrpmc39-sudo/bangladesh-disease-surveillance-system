@@ -3,8 +3,8 @@ import { useMemo, useState } from "react";
 import DashboardHeader from "./DashboardHeader";
 import DashboardFilters from "./DashboardFilters";
 
-import { DashboardFilters as FilterType } from "../../types/dashboard";
-import { SurveillanceCase } from "../../types/surveillance";
+import type { DashboardFilters as FilterType } from "../../types/dashboard";
+import type { SurveillanceCase } from "../../types/SurveillanceCase";
 
 import KPICards from "./KPICards"; 
 

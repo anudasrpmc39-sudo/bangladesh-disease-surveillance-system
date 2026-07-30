@@ -2,14 +2,6 @@ export interface FilterState {
   disease: string;
   district: string;
   upazila: string;
-  startDate: string;
-  endDate: string;
-}
-
-export interface FilterState {
-  disease: string;
-  district: string;
-  upazila: string;
 
   startDate: string;
   endDate: string;

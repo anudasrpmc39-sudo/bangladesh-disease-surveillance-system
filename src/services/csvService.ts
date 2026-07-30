@@ -22,7 +22,7 @@ export async function loadSurveillanceData(): Promise<SurveillanceCase[]> {
         resolve(results.data);
       },
 
-      error: (error) => {
+      error: (error: Error) => {
         reject(error);
       },
     });

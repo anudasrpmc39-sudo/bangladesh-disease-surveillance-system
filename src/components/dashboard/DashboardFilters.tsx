@@ -1,5 +1,5 @@
 import { RotateCcw, Download } from "lucide-react";
-import { DashboardFilters as FilterType } from "../../types/dashboard";
+import type { DashboardFilters as FilterType } from "../../types/dashboard";
 
 type DashboardFiltersProps = {
   filters: FilterType;
