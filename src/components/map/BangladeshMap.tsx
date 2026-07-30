@@ -50,7 +50,7 @@ export default function BangladeshMap({ data }: BangladeshMapProps) {
 
   // Load GeoJSON
   useEffect(() => {
-    fetch("/data/bangladesh_districts.geojson")
+    fetch(`${import.meta.env.BASE_URL}data/bangladesh_districts.geojson`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to load GeoJSON");
@@ -116,7 +116,9 @@ export default function BangladeshMap({ data }: BangladeshMapProps) {
             }}
             onEachFeature={(feature, layer) => {
               const props = feature.properties as any;
-
+              
+              console.log(props);
+              
               const geoName = props?.name?.trim() ?? "";
 
               // Convert GeoJSON name to CSV name
